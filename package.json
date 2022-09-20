@@ -9,7 +9,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "pinia": "^2.0.22",
     "vue": "^3.2.38"
   },
   "devDependencies": {
@@ -20,6 +19,7 @@
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "jsdom": "^20.0.0",
+    "pinia": "^2.0.22",
     "prettier": "^2.7.1",
     "vite": "^3.0.9",
     "vitest": "^0.23.0"
