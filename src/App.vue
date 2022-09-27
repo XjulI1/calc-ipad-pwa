@@ -36,21 +36,24 @@ button {
 }
 </style>
 
-<style scoped>
+<style lang="scss" scoped>
+/* STYLE LOCAL */
+@import "./styles/_variables.scss";
+
 .App {
   max-width: 600px;
   margin: auto;
 }
 .history {
   width: 100%;
-  height: 20vh;
+  height: $HISTORY_HEIGHT;
 }
 .result {
   width: 100%;
-  height: 10vh;
+  height: $RESULT_HEIGHT;
 }
 .keyboard {
   width: 100%;
-  height: 50vh;
+  height: $KEYBOARD_HEIGHT;
 }
 </style>

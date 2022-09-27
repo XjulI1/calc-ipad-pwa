@@ -16,12 +16,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../styles/_variables.scss";
+
 .button {
   width: calc(25% - 1px * 2);
-  height: calc(50vh / 5);
+  height: calc($KEYBOARD_HEIGHT / 5);
   font-size: 1.7rem;
-  line-height: calc(50vh / 5);
+  line-height: calc($KEYBOARD_HEIGHT / 5);
   font-weight: bold;
   text-align: center;
   margin: 1px;
