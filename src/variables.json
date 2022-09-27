@@ -2,6 +2,28 @@
     "COLORS": {
         "lightGray": "lightgray",
         "gray": "dimgray",
-        "orange": "orange"
+        "orange": "orange",
+        "black": "black"
+    },
+    "KEYBOARD": {
+        "CLEAN": "AC",
+        "INVERT": "+/-",
+        "DELETE": "<-",
+        "DIV": "/",
+        "SEVEN": "7",
+        "EIGHT": "8",
+        "NINE": "9",
+        "MULTI": "X",
+        "FOUR": "4",
+        "FIVE": "5",
+        "SIX": "6",
+        "MINUS": "-",
+        "ONE": "1",
+        "TWO": "2",
+        "THREE": "3",
+        "PLUS": "+",
+        "ZERO": "0",
+        "COMA": ",",
+        "EQUAL": "="
     }
 }

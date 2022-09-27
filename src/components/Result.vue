@@ -4,11 +4,11 @@
 
 <script>
 import { storeToRefs } from "pinia"
-import { useResult } from "@/store/result"
+import { useResultStore } from "@/store/result"
 
 export default {
   setup() {
-    const store = useResult()
+    const store = useResultStore()
     const { value } = storeToRefs(store)
 
     return { value }

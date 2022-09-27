@@ -1,11 +1,17 @@
 import { defineStore } from 'pinia'
 
-export const useResult = defineStore('result', {
-    state: () => ({ value: '' }),
+const initialState = { value: '' }
+
+export const useResultStore = defineStore('result', {
+    state: () => ({ ...initialState }),
 
     actions: {
         addValue(newValue) {
             this.value += newValue
+        },
+
+        resetValue() {
+            this.value = initialState.value
         }
     }
 })

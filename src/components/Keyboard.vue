@@ -5,7 +5,7 @@
 </template>
 <script>
 import KeyboardButton from "./Keyboard--Button.vue";
-import { COLORS } from "@/variables.json";
+import { COLORS, KEYBOARD } from "@/variables.json";
 
 export default {
   components: { KeyboardButton },
@@ -13,79 +13,79 @@ export default {
     return {
       buttons: [
         {
-          label: "AC",
-          style: { backgroundColor: COLORS.lightGray, color: "black" },
+          label: KEYBOARD.CLEAN,
+          style: { backgroundColor: COLORS.lightGray, color: COLORS.black },
         },
         {
-          label: "+/-",
-          style: { backgroundColor: COLORS.lightGray, color: "black" },
+          label: KEYBOARD.INVERT,
+          style: { backgroundColor: COLORS.lightGray, color: COLORS.black },
         },
         {
-          label: "<-",
-          style: { backgroundColor: COLORS.lightGray, color: "black" },
+          label: KEYBOARD.DELETE,
+          style: { backgroundColor: COLORS.lightGray, color: COLORS.black },
         },
         {
-          label: "/",
-          style: { backgroundColor: COLORS.lightGray, color: "black" },
+          label: KEYBOARD.DIV,
+          style: { backgroundColor: COLORS.lightGray, color: COLORS.black },
         },
         {
-          label: "7",
+          label: KEYBOARD.SEVEN,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "8",
+          label: KEYBOARD.EIGHT,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "9",
+          label: KEYBOARD.NINE,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "X",
+          label: KEYBOARD.MULTI,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "4",
+          label: KEYBOARD.FOUR,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "5",
+          label: KEYBOARD.FIVE,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "6",
+          label: KEYBOARD.SIX,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "-",
+          label: KEYBOARD.MINUS,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "1",
+          label: KEYBOARD.ONE,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "2",
+          label: KEYBOARD.TWO,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "3",
+          label: KEYBOARD.THREE,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "+",
+          label: KEYBOARD.PLUS,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "0",
+          label: KEYBOARD.ZERO,
           style: { backgroundColor: COLORS.gray, width: "calc(50% - 1px * 2)" },
         },
         {
-          label: ",",
+          label: KEYBOARD.COMA,
           style: { backgroundColor: COLORS.gray },
         },
         {
-          label: "=",
+          label: KEYBOARD.EQUAL,
           style: { backgroundColor: COLORS.orange },
         },
       ],

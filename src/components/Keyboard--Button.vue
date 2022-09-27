@@ -3,14 +3,15 @@
 </template>
 
 <script>
-import { mapActions } from "pinia";
-import { useResult } from "@/store/result";
+import { executeAction, getActionFromKey } from "@/helpers/actions";
 
 export default {
   props: ["label", "style"],
 
   methods: {
-    ...mapActions(useResult, ['addValue'])
+    addValue(label) {
+      executeAction(getActionFromKey(label))
+    }
   }
 };
 </script>
