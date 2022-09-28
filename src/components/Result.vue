@@ -1,5 +1,5 @@
 <template>
-  <div>{{ value }}</div>
+  <div class="result">{{ value }}</div>
 </template>
 
 <script>
@@ -15,4 +15,14 @@ export default {
   }
 }
 </script>
-<style></style>
+
+<style lang="scss" scoped>
+@import "@/styles/_variables.scss";
+.result {
+  background-color: #222;
+  font-size: 2.5rem;
+  line-height: $RESULT_HEIGHT;
+  text-align: right;
+}
+</style>
+

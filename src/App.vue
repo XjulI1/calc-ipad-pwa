@@ -38,7 +38,7 @@ button {
 
 <style lang="scss" scoped>
 /* STYLE LOCAL */
-@import "./styles/_variables.scss";
+@import "@/styles/_variables.scss";
 
 .App {
   max-width: 600px;
