@@ -12,6 +12,10 @@ export const useResultStore = defineStore('result', {
 
         resetValue() {
             this.value = initialState.value
+        },
+
+        deleteLastValue() {
+            this.value = this.value.slice(0, -1)
         }
     }
 })

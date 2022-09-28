@@ -4,7 +4,8 @@ import { KEYBOARD } from '@/variables.json';
 export const KEY_ACTIONS = {
     NUMBER: "number",
     RESET: 'reset',
-    DEFAULT: "default"
+    DEFAULT: "default",
+    DELETE: 'delete'
 }
 
 export const getActionFromKey = function (key) {
@@ -30,6 +31,9 @@ export const getActionFromKey = function (key) {
         case KEYBOARD.CLEAN:
             template.action = KEY_ACTIONS.RESET
             break;
+        case KEYBOARD.DELETE:
+            template.action = KEY_ACTIONS.DELETE
+            break;
         default:
             return null
     }
@@ -44,9 +48,12 @@ export const executeAction = function ({ action, value }) {
         case KEY_ACTIONS.NUMBER:
             resultStore.addValue(value)
             break;
-
         case KEY_ACTIONS.RESET:
             resultStore.resetValue()
+            break;
+        case KEY_ACTIONS.DELETE:
+            resultStore.deleteLastValue()
+            break;
         default:
             return null;
     }
