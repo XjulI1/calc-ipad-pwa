@@ -5,7 +5,8 @@ export const KEY_ACTIONS = {
     NUMBER: "number",
     RESET: 'reset',
     DEFAULT: "default",
-    DELETE: 'delete'
+    DELETE: 'delete',
+    SIGN: 'sign'
 }
 
 export const getActionFromKey = function (key) {
@@ -34,8 +35,22 @@ export const getActionFromKey = function (key) {
         case KEYBOARD.DELETE:
             template.action = KEY_ACTIONS.DELETE
             break;
+        case KEYBOARD.COMA:
+            template.action = KEY_ACTIONS.SIGN
+            template.value = '.'
+            break;
+        case KEYBOARD.MULTI:
+            template.action = KEY_ACTIONS.SIGN
+            template.value = '*'
+            break;
+        case KEYBOARD.PLUS:
+        case KEYBOARD.MINUS:
+        case KEYBOARD.DIV:
+            template.action = KEY_ACTIONS.SIGN
+            template.value = key
+            break;
         default:
-            return null
+            return null;
     }
 
     return template
@@ -46,6 +61,7 @@ export const executeAction = function ({ action, value }) {
 
     switch (action) {
         case KEY_ACTIONS.NUMBER:
+        case KEY_ACTIONS.SIGN:
             resultStore.addValue(value)
             break;
         case KEY_ACTIONS.RESET:
