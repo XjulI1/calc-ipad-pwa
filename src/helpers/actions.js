@@ -6,7 +6,8 @@ export const KEY_ACTIONS = {
     RESET: 'reset',
     DEFAULT: "default",
     DELETE: 'delete',
-    SIGN: 'sign'
+    SIGN: 'sign',
+    EVAL: 'eval'
 }
 
 export const getActionFromKey = function (key) {
@@ -49,6 +50,9 @@ export const getActionFromKey = function (key) {
             template.action = KEY_ACTIONS.SIGN
             template.value = key
             break;
+        case KEYBOARD.EQUAL:
+            template.action = KEY_ACTIONS.EVAL
+            break;
         default:
             return null;
     }
@@ -70,6 +74,8 @@ export const executeAction = function ({ action, value }) {
         case KEY_ACTIONS.DELETE:
             resultStore.deleteLastValue()
             break;
+        case KEY_ACTIONS.EVAL:
+            resultStore.evalResult()
         default:
             return null;
     }

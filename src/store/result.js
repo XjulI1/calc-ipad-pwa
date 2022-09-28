@@ -16,6 +16,10 @@ export const useResultStore = defineStore('result', {
 
         deleteLastValue() {
             this.value = this.value.slice(0, -1)
+        },
+
+        evalResult() {
+            this.value = eval(this.value)
         }
     }
 })
