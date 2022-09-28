@@ -12,14 +12,4 @@ describe('actions helper', () => {
             expect(getActionFromKey("0")).toEqual({ action: "number", value: 0 })
         })
     })
-
-    describe("executeAction()", () => {
-        describe("when action is NUMBER", () => {
-            it("should add value in the result store", () => {
-                executeAction({ action: KEY_ACTIONS.NUMBER, value: 0 })
-
-                expect(addValue).toHaveBeenCalledOnce()
-            })
-        })
-    })
 })
